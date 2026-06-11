@@ -52,12 +52,7 @@ app.get("/uno", (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log('Servidor rodando! Acesse http://localhost:3000');
-});
-
-
-app.get("/san", (req,res) => {
+app.get('/san', (req,res) => {
   res.json({
   titulo: "San",
     conteudo: "Próximas atividades a gente elabora os outros métodos HTML"
