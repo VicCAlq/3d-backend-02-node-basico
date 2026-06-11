@@ -18,9 +18,9 @@ app.use(express.static(path.join(__dirname, 'src')));
 
 // Envio de um arquivo html separado
 app.get('/index', (req, res) => {
-  res.sendFile(path.join(__dirname, 'indexAtividade.html'));
+  res.sendFile(path.join(__dirname, 'src' ,'indexAtividade.html'));
 });
 
-app.listen(3000, () => {
-  console.log('Servidor rodando em http://localhost:3000');
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });

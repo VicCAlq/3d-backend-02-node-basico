@@ -20,7 +20,7 @@ const app = express();
 const port = 3000
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'src')));
-
+app.use(express.json());
 
 app.get('/objeto', (req, res) => {
   res.json({
@@ -29,6 +29,6 @@ app.get('/objeto', (req, res) => {
      pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?",
   });
 });
-app.listen(3000, () => {
-  console.log('Servidor rodando em http://localhost:3000');
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
