@@ -5,6 +5,6 @@
   * O endereço desta rota deve ser "/index".
   *
   * Ao acessar esta rota, deve ser enviado o arquivo 
-  * "indexAtividade.js" de dentro da pasta src:
+  * "indexAtividade.html" de dentro da pasta src:
   */
 

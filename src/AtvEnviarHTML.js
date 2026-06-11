@@ -17,3 +17,14 @@
   *  </html>
   */
 
+const express = require("express");
+const res = require("express/lib/response");
+const app = express();
+const port = 3000
+
+app.get('/HTML', req, res)
+
+
+app.listen
+
+
