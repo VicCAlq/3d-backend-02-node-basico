@@ -29,3 +29,19 @@
   */
 
 
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
+const app = express();
+const port = 3000
+app.use(cors());
+app.use(express.static(path.join(__dirname, 'src')));
+
+// Envio de um arquivo html separado
+app.get('/index', (req, res) => {
+  res.sendFile(path.join(__dirname, 'indexAtividade.html'));
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando em http://localhost:3000');
+});
