@@ -5,6 +5,25 @@
   * O endereço desta rota deve ser "/index".
   *
   * Ao acessar esta rota, deve ser enviado o arquivo 
-  * "indexAtividade.js" de dentro da pasta src:
+  * "indexHTML.js" de dentro da pasta src:
   */
 
+const express = require('express')
+const app = express()
+const port = 3000
+
+
+app.listen(port, () => {
+    console.log('Me chama na porta ${port}')
+})
+
+const path =require('path');
+const cors = require('cors');
+app.use(cors());
+app.use express.static(path.join(__dirname, 'src'));
+
+app.get('/index', (req,res) => {
+  res.sendFile(
+    path.join(__dirname,'')
+  )
+})
