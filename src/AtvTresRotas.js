@@ -28,4 +28,42 @@
   * }
   */
 
+const express = require('express')
+const app = express()
+const port = 3000
+const path = require('path');
+const cors = require('cors');
+app.use(express.json());
+app.use(cors());
+app.use(express.static(path.join(__dirname, 'src')));
 
+app.get("/uno", (req, res) => {
+    res.send(`
+      <html>
+      <head>
+        <title>Tudo começa aqui</title>
+      </head>
+      <body>
+        <h1>A próxima rota é em Inglês</h1>
+        <p>Para acessar ela, como se chama o número 2 em inglês?</p>
+      </body>
+    </html>
+    `);
+});
+
+
+app.listen(port, () => {
+    console.log('Servidor rodando! Acesse http://localhost:3000');
+});
+
+
+app.get("/san", (req,res) => {
+  res.json({
+  titulo: "San",
+    conteudo: "Próximas atividades a gente elabora os outros métodos HTML"
+  })
+})
+
+app.listen(port, () => {
+    console.log('Servidor rodando! Acesse http://localhost:3000');
+});
