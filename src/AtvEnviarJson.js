@@ -13,3 +13,19 @@
   * }
   */
 
+const express = require("express");
+const app = express();
+app.use(express.json());
+
+
+app.get('/objeto', (req, res) => {
+    res.json({
+      acesso: "OK",
+     titulo: "Responda a pergunta abaixo:",
+     pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?",
+    });
+});
+
+app.listen(3000, () => {
+  console.log('Você esta na porta 3000');
+});
