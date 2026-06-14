@@ -24,6 +24,6 @@ app.use express.static(path.join(__dirname, 'src'));
 
 app.get('/index', (req,res) => {
   res.sendFile(
-    path.join(__dirname,'')
+    path.join(__dirname,'indexHTML.js')
   )
 })
