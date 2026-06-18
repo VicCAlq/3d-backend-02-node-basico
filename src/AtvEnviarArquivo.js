@@ -16,7 +16,7 @@ const port = 3000
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'src')));
 
-// Envio de um arquivo html separado
+
 app.get('/index', (req, res) => {
   res.sendFile(path.join(__dirname, 'src' ,'indexAtividade.html'));
 });
