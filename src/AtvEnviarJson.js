@@ -12,4 +12,16 @@
   *   pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?",
   * }
   */
+const express = require('express');
+const path = require('path');
+const app = express();
+
+
+app.get('/objeto', (req, res) => {
+  res.json({
+    acesso: "OK",
+    titulo: "Responda a pergunta abaixo:",
+    pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?"
+  });
+});
 
