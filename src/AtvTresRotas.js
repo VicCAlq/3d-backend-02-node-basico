@@ -28,4 +28,50 @@
   * }
   */
 
+// Importa o Express
+const express = require('express');
+
+// Importa algumas funcionalidades que veremos depois
+const path = require('path');
+const cors = require('cors');
+
+const app = express();
+
+// Permite que o servidor entenda JSON no corpo das requisições
+app.use(express.json());
+// Habilita CORS (veremos sobre isso depois)
+app.use(cors());
+app.use(express.static(path.join(__dirname, 'src')));
+
+// Envio de HTML escrito direto no código
+app.get('/uno', (req, res) => {
+  res.send(`
+    <html>
+      <head>
+      <title>Tudo começa aqui</title>
+     </head>
+     <body>
+       <h1>A próxima rota é em Inglês</h1>
+       <p>Para acessar ela, como se chama o número 2 em inglês?</p>
+     </body>
+  </html>
+    `);
+});
+
+// Envio de um arquivo html separado
+app.get('/two', (req, res) => {
+  res.sendFile(path.join(__dirname, 'two.html'));
+});
+
+// Envio de uma resposta em JSON
+app.get('/san', (req, res) => {
+  res.json({
+    titulo: "San",
+    conteudo: "Próximas atividades a gente elabora os outros métodos HTML"
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando em http://localhost:3000');
+});
 
