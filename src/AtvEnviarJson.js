@@ -22,7 +22,7 @@ app.get('/objeto', (req,res) => {
   res.json({
     acesso: "OK",
    titulo: "Responda a pergunta abaixo:",
-  pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?",
+  pergunta: "Quem é mais pontudo, o Pikachu ou o Sonic?",
   })
 })
 
