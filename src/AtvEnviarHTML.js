@@ -29,7 +29,7 @@ app.get("/inicio", (req, res) => {
       </head>
       <body>
         <h1>Você acessou a página de início!</h1>
-        <p>Passe um PIX de 1 real como pedágio :D</p>
+        <p>De um grito para eu saber se gsotou</p>
       </body>
    </html>
     `);
