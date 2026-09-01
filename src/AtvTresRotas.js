@@ -45,7 +45,7 @@ app.get("/uno", (req, res) => {
       </head>
       <body>
         <h1>A próxima rota é em Inglês</h1>
-        <p>Para acessar ela, como se chama o número 2 em inglês?</p>
+        <p>Para acessar ela, como se fala saudade em inglês?</p>
       </body>
     </html>
     `);
